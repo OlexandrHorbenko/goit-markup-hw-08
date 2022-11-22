@@ -1,0 +1,38 @@
+.about__experience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.experience__item {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
+}
+
+.experience__title {
+  @include font(14px, calc(16 / 14), 700, 0.03em);
+  text-transform: uppercase;
+  color: var(--gray-black);
+  margin-bottom: 10px;
+}
+
+.experience__description {
+  @include font(14px, calc(24 / 14), null, 0.03em);
+}
+
+.experience__box {
+  width: 270px;
+  height: 120px;
+  @extend %align-list;
+   justify-content: center;
+  background-color: var(--team-background);
+  border-radius: 4px;
+  margin-bottom: 30px;
+}

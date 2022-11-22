@@ -1,0 +1,201 @@
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: var(--backdrop-color);
+  position: fixed;
+  top: 0;
+  transition: opacity var(--transition-param),
+    visibility var(--transition-param);
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    & .modal {
+      transform: translate(-50%, -50%) scaleY(0);
+    }
+  }
+}
+
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background: var(--gray-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+  transition: transform var(--transition-param);
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  background-color: var(--gray-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  @extend %align-list;
+  justify-content: center;
+}
+
+.modal-close-icon {
+  transition: fill var(--transition-param);
+  &:hover,
+  &:focus {
+    fill: var(--gray-blue);
+  }
+}
+
+.modal-title {
+  @include font(20px, calc(23 / 20), 700, 0.03em);
+  text-align: center;
+  color: var(--gray-black);
+  margin-bottom: 12px;
+}
+
+.input-label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.input-label-text {
+  @include font(12px, calc(14 / 12), null, 0.01em);
+  display: block;
+  margin-bottom: 4px;
+  color: var(--maine_color);
+}
+
+.input-wrap {
+  position: relative;
+  display: block;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  @include font(14px, calc(14 / 12), null, 0.01em);
+  color: var(--gray-black);
+  padding-left: 42px;
+  padding-right: 12px;
+  outline: transparent;
+  transition: border-color var(--transition-param);
+  &:focus {
+    border-color: var(--gray-blue);
+  }
+}
+
+.modal-field {
+  margin-bottom: 20px;
+}
+
+.modal-text {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  @include font(14px, calc(14 / 12), null, 0.01em);
+  color: var(--gray-black);
+  padding: 12px 16px;
+  resize: none;
+  display: block;
+  margin-top: 4px;
+  outline: transparent;
+  transition: border-color var(--transition-param);
+  &:focus {
+    border-color: var(--gray-blue);
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: var(--placeholder-modal-field-color);
+  }
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill var(--transition-param);
+  .modal-input:focus + & {
+    fill: var(--gray-blue);
+  }
+}
+
+.modal-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal-checkbox-icon {
+  margin-right: 7px;
+  position: relative;
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid;
+  border-color: var(--gray-black-logo);
+  border-radius: 2px;
+  background-color: transparent;
+  transition: transform var(--transition-param),
+    border-radius var(--transition-param),
+    background-color var(--transition-param);
+  .checkbox-input:checked + .modal-checkbox-icon > & {
+    background-color: var(--gray-blue);
+    border-color: transparent;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+}
+
+.modal-checkbox-text {
+  @include font(14px, calc(24 / 14), null, 0.03em);
+  color: var(--maine_color);
+  margin-right: 5px;
+}
+
+.modal-checkbox-link {
+  @include font(14px, calc(24 / 14), null, 0.03em);
+  text-decoration-line: underline;
+  color: var(--gray-blue);
+}
+
+.modal-btn {
+  background-color: var(--gray-blue);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  font-family: inherit;
+  font-style: normal;
+  @include font(16px, calc(30 / 16), 700, 0.06em);
+  align-items: center;
+  text-align: center;
+  color: var(--gray-white);
+  min-width: 200px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+  transition: background-color var(--transition-param);
+  &:hover,
+  &:focus {
+    background-color: var(--gray-blue-button);
+  }
+}

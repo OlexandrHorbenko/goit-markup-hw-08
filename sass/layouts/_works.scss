@@ -1,0 +1,37 @@
+.what-we-do {
+    padding-top: 0;
+}
+
+.what-we-do-title {
+    @include font(36px, calc(42 / 36), 700, 0.03em);
+    text-align: center;
+    color: var(--gray-black);
+    margin-bottom: 50px;
+}
+
+.what-we-do-list {
+    display: flex;
+    gap: 30px;
+}
+
+.what-we-do-icon {
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+.what-we-do-overtext {
+    position: relative;
+    overflow: hidden;
+}
+
+.what-we-do-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include font(14px, calc(16 / 14), 700, 0.03em);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--gray-white);
+    background-color: var(--what-we-do-boz);
+    padding: 27px 0;
+}

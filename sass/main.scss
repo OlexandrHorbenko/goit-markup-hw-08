@@ -1,0 +1,21 @@
+@import './utils/placeholders';
+@import './utils/variables';
+@import './utils/hidden';
+@import './utils/mixins';
+
+@import './base/common';
+@import './base/reset';
+
+@import './components/container';
+@import './components/section';
+@import './components/modal';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/about';
+@import './layouts/works';
+@import './layouts/team';
+@import './layouts/partners';
+@import './layouts/footer';
+@import './layouts/filters';
+@import './layouts/cards';

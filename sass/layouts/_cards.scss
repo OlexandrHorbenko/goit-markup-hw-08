@@ -1,0 +1,69 @@
+.hero-list-icn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hero-link {
+  background-color: var(--gray-white);
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.portfolio-link {
+  background-color: var(--gray-white);
+  display: block;
+  transition: box-shadow var(--transition-param);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio-card-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-img-text {
+  position: absolute;
+  top: 0;
+  padding: 63px 24px;
+  @include font(18px, calc(28 / 18), null, 0.03em);
+  justify-content: center;
+  color: var(--gray-white);
+  background-color: var(--back-portfolio-img-text);
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform var(--transition-param);
+  .portfolio-card-img:hover & {
+    transform: translateY(0);
+  }
+}
+
+.hero-about {
+  padding: 20px 24px;
+  min-width: 322px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: var(--color-box);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-box);
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: var(--color-box);
+}
+
+.hero-title {
+  @include font(18px, calc(36 / 18), 700, 0.06em);
+  color: var(--gray-black);
+  display: block;
+}
+
+.hero-p {
+  @include font(16px, calc(30 / 16), null, 0.03em);
+  color: var(--maine_color);
+  display: block;
+  margin-top: 4px;
+}

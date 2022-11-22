@@ -1,0 +1,28 @@
+body {
+  font-family: "roboto", sans-serif;
+  background-color: var(--gray-white);
+  color: var(--maine_color);
+}
+
+:root {
+  --maine_color: #757575;
+  --gray-black-logo: #000000;
+  --gray-blue: #2196f3;
+  --gray-black: #212121;
+  --gray-background: #2f303a;
+  --gray-white: #ffffff;
+  --gray-blue-button: #188ce8;
+  --team-background: #f5f4fa;
+  --footer-background: #2f303a;
+  --footer-address: rgba(255, 255, 255, 0.6);
+  --color-box: #eeeeee;
+  --ramka-top: #ececec;
+  --border-color: #afb1b8;
+  --footer-icon: rgba(255, 255, 255, 0.1);
+  --slogan-bg: #c4c4c4;
+  --transition-param: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --back-portfolio-img-text: rgba(33, 150, 243, 0.9);
+  --backdrop-color: rgba(0, 0, 0, 0.2);
+  --what-we-do-boz: rgba(47, 48, 58, 0.8);
+  --placeholder-modal-field-color: rgba(117, 117, 117, 0.5);
+}
