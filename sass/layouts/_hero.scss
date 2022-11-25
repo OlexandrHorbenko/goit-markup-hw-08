@@ -1,32 +1,81 @@
-.hero {
+.wrap {
+  padding: 0;
+  max-width: 100%;
+}
+
+.hero__container {
   background-color: var(--slogan-bg);
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero_background.jpg);
+    url(../images/hero_background_mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
-  max-width: 1600px;
-}
-
-.hero__container {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 60px;
   margin: 0 auto;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+          url(../images/hero_background_mob_2x.jpg);
+    }
+  @media screen and (min-width: 768px) {
+    padding: 118px 204px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero_background_tab.jpg);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)),
+            url(../images/hero_background_tab_2x.jpg);
+        }
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero_background.jpg);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(to right,
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)),
+            url(../images/hero_background_2x.jpg);
+        }
+  }
 }
 
 .wrap__title {
-  @include font(44px, calc(60 / 44), 900, 0.06em);
+  @include font(16px, calc(42 / 16), 900, 0.06em);
   text-transform: uppercase;
   color: var(--gray-white);
   display: block;
-  max-width: 696px;
+  max-width: 360px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 480px) {
+    @include font(26px, calc(42 / 26), 900, 0.06em);
+  }
+  @media screen and (min-width: 1200px) {
+    @include font(44px, calc(60 / 44), 900, 0.06em);
+    max-width: 696px;
+  }
 }
 
 .wrap__btn {
@@ -36,15 +85,23 @@
   background-color: var(--gray-blue);
   font-family: inherit;
   font-style: normal;
-  @include font(16px, calc(30 / 16), 700, 0.06em);
+  @include font(14px, calc(30 / 14), 700, 0.06em);
   text-align: center;
   color: var(--gray-white);
   margin-top: 30px;
-  min-width: 216px;
-  padding: 10px 32px;
+  min-width: 200px;
+  padding: 10px 24px;
   transition: background-color var(--transition-param);
   &:hover,
   &:focus {
     background-color: var(--gray-blue-button);
+  }
+  @media screen and (min-width: 480px) {
+    @include font(16px, calc(30 / 16), 700, 0.06em);
+  }
+  @media screen and (min-width: 1200px) {
+    @include font(16px, calc(30 / 16), 700, 0.06em);
+    min-width: 216px;
+    padding: 10px 32px;
   }
 }
