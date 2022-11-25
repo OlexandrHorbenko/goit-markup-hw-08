@@ -594,6 +594,12 @@ img {
 
 .what-we-do {
   padding-top: 0;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .what-we-do {
+    display: block;
+  }
 }
 
 .what-we-do-title {
