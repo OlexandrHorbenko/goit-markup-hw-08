@@ -1,8 +1,11 @@
 .partner-title {
-    @include font(36px, calc(42 / 36), 700, 0.03em);
+  @include font(36px, calc(42 / 36), 700, 0.03em);
   text-align: center;
   color: var(--gray-black);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .partner-list {
@@ -16,12 +19,12 @@
   width: calc((100% - 30px) / 2);
   height: 92px;
   @media screen and (min-width: 768px) {
-      width: calc((100% - 60px) / 3);
-    }
-  
-    @media screen and (min-width: 1200px) {
-      width: calc((100% - 150px) / 6);
-    }
+    width: calc((100% - 60px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .partner-link {

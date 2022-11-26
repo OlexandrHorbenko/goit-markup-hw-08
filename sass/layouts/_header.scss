@@ -84,7 +84,7 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
-    gap: 30px;
+    gap: 50px;
     padding: 32px 0;
   }
 }
@@ -188,6 +188,9 @@
   &:hover,
   &:focus {
     color: var(--gray-blue);
+  }
+  &.current {
+      color: var(--gray-blue);
   }
 }
 

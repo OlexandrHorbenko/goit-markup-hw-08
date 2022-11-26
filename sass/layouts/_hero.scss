@@ -20,11 +20,13 @@
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-          url(../images/hero_background_mob_2x.jpg);
-    }
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero_background_mob_2x.jpg);
+  }
   @media screen and (min-width: 768px) {
     padding: 118px 204px;
     background-image: linear-gradient(
@@ -33,31 +35,36 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/hero_background_tab.jpg);
-      @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-          background-image: linear-gradient(to right,
-              rgba(47, 48, 58, 0.4),
-              rgba(47, 48, 58, 0.4)),
-            url(../images/hero_background_tab_2x.jpg);
-        }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero_background_tab_2x.jpg);
+    }
   }
   @media screen and (min-width: 1200px) {
     padding: 200px 0;
+    max-width: 1600px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/hero_background.jpg);
-      @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-          background-image: linear-gradient(to right,
-              rgba(47, 48, 58, 0.4),
-              rgba(47, 48, 58, 0.4)),
-            url(../images/hero_background_2x.jpg);
-        }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/hero_background_2x.jpg);
+    }
   }
 }
 

@@ -12,7 +12,10 @@
   @include font(36px, calc(42 / 36), 700, 0.03em);
   text-align: center;
   color: var(--gray-black);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .team-item {
@@ -20,17 +23,17 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--gray-white);
-   width: 100%;
+  width: 100%;
   @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: calc((100% - 90px) / 4);
   }
 }
 
 .team-hero {
-    @include font(16px, calc(19 / 16), 500, 0.03em);
+  @include font(16px, calc(19 / 16), 500, 0.03em);
   text-align: center;
   color: var(--gray-black);
   margin-bottom: 10px;
