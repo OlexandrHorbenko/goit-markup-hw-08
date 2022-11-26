@@ -18,12 +18,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header__container">
         <nav class="navigation">
           <a class="logo logo__navigation link" href="./index.html" lang="en">
@@ -44,7 +43,11 @@
         <ul class="connect list">
           <li class="connect__list">
             <a class="connect__mail link" href="mailto:info@devstudio.com">
-              <svg class="connect__icon" width="16" height="12">
+              <svg
+                class="connect__icon connect-mail-icon"
+                width="14"
+                height="10"
+              >
                 <use href="./images/icons.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
@@ -52,15 +55,81 @@
           </li>
           <li class="connect__list">
             <a class="connect__tel link" href="tel:+380961111111">
-              <svg class="connect__icon" width="10" height="16">
+              <svg
+                class="connect__icon connect-tel-icon"
+                width="10"
+                height="14"
+              >
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-menu__container">
+          <button type="button" class="menu-close" data-menu-close>
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-close_40px"></use>
+            </svg>
+          </button>
+          <div class="mob-menu-top">
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link current" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a class="mob-menu-list__link link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob-connect list">
+              <li class="mob-connect__list">
+                <a class="mob-connect__tel link" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-connect__list">
+                <a
+                  class="mob-connect__mail link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-soc list">
+              <li class="mob-soc__list">
+                <a href="" class="mob-soc__link link">Instagram</a>
+              </li>
+              <li class="mob-soc__list">
+                <a href="" class="mob-soc__link link">Twitter</a>
+              </li>
+              <li class="mob-soc__list">
+                <a href="" class="mob-soc__link link">Facebook</a>
+              </li>
+              <li class="mob-soc__list">
+                <a href="" class="mob-soc__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
       <section class="hero hero__container">
@@ -202,7 +271,7 @@
                   media="(min-width: 320px)"
                 />
                 <img
-                  src="./images/team_card_1_igor.jpg"
+                  src="./images/team_card_1_igor_mob.jpg"
                   alt="Усміхненний бородань в окулярах"
                   width="450"
                   height="auto"
@@ -287,7 +356,7 @@
                   media="(min-width: 320px)"
                 />
                 <img
-                  src="./images/team_card_2_olha.jpg"
+                  src="./images/team_card_2_olha_mob.jpg"
                   alt="Єдина жінка"
                   width="450"
                   height="auto"
@@ -372,7 +441,7 @@
                   media="(min-width: 320px)"
                 />
                 <img
-                  src="./images/team_card_3_mykola.jpg"
+                  src="./images/team_card_3_mykola_mob.jpg"
                   alt="Усміхнений парубок без окулрів"
                   width="450"
                   height="auto"
@@ -457,7 +526,7 @@
                   media="(min-width: 320px)"
                 />
                 <img
-                  src="./images/team_card_4_mykhaylo.jpg"
+                  src="./images/team_card_4_mykhaylo_mob.jpg"
                   alt="Щось підозрюючий бородань в окулярах"
                   width="450"
                   height="auto"
@@ -602,68 +671,70 @@
       </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-cont">
-        <div class="footer-right">
-          <a class="footer-logo link" href="./index.html" lang="en">
-            <span class="footer-logo-part">Web</span>Studio</a
-          >
-          <address class="footer-adress">
-            <ul class="footer-link list">
-              <li class="footer-list-link">
-                <a
-                  class="footer-address link"
-                  href="https://goo.gl/maps/BE6YMUcG3WjpmZPy9"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+        <div class="footer-wrap">
+          <div class="footer-right">
+            <a class="footer-logo link" href="./index.html" lang="en">
+              <span class="footer-logo-part">Web</span>Studio</a
+            >
+            <address class="footer-adress">
+              <ul class="footer-link list">
+                <li class="footer-list-link">
+                  <a
+                    class="footer-address link"
+                    href="https://goo.gl/maps/BE6YMUcG3WjpmZPy9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="footer-list-link">
+                  <a class="footer-list link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer-list-link">
+                  <a class="footer-list link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-soc-left">
+            <p class="footer-soc-title">приєднуйтесь</p>
+            <ul class="footer-soc-list list">
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link link">
+                  <svg class="footer-soc-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-list-link">
-                <a class="footer-list link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link link">
+                  <svg class="footer-soc-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer-list-link">
-                <a class="footer-list link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link link">
+                  <svg class="footer-soc-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-soc-item">
+                <a href="" class="footer-soc-link link">
+                  <svg class="footer-soc-icon" width="20" height="20">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="footer-soc-left">
-          <p class="footer-soc-title">приєднуйтесь</p>
-          <ul class="footer-soc-list list">
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-soc-item">
-              <a href="" class="footer-soc-link link">
-                <svg class="footer-soc-icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="footer-join">
           <p class="footer-join-title">Підпишіться на розсилку</p>
@@ -684,7 +755,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
@@ -763,5 +834,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

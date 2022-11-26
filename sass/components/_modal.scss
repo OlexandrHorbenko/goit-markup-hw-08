@@ -6,10 +6,12 @@
   top: 0;
   transition: opacity var(--transition-param),
     visibility var(--transition-param);
+
   &.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+
     & .modal {
       transform: translate(-50%, -50%) scaleY(0);
     }
@@ -17,8 +19,8 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   background: var(--gray-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -29,6 +31,10 @@
   left: 50%;
   transform: translate(-50%, -50%) scaleY(1);
   transition: transform var(--transition-param);
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -46,6 +52,7 @@
 
 .modal-close-icon {
   transition: fill var(--transition-param);
+
   &:hover,
   &:focus {
     fill: var(--gray-blue);
@@ -53,10 +60,13 @@
 }
 
 .modal-title {
-  @include font(20px, calc(23 / 20), 700, 0.03em);
+  @include font(20px, calc(30 / 20), 700, 0.03em);
   text-align: center;
   color: var(--gray-black);
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    @include font(20px, calc(23 / 20), 700, 0.03em);
+  }
 }
 
 .input-label {
@@ -87,6 +97,7 @@
   padding-right: 12px;
   outline: transparent;
   transition: border-color var(--transition-param);
+
   &:focus {
     border-color: var(--gray-blue);
   }
@@ -109,9 +120,11 @@
   margin-top: 4px;
   outline: transparent;
   transition: border-color var(--transition-param);
+
   &:focus {
     border-color: var(--gray-blue);
   }
+
   &::placeholder {
     font-weight: 400;
     font-size: 12px;
@@ -127,6 +140,7 @@
   top: 50%;
   transform: translateY(-50%);
   transition: fill var(--transition-param);
+
   .modal-input:focus + & {
     fill: var(--gray-blue);
   }
@@ -158,6 +172,7 @@
   transition: transform var(--transition-param),
     border-radius var(--transition-param),
     background-color var(--transition-param);
+
   .checkbox-input:checked + .modal-checkbox-icon > & {
     background-color: var(--gray-blue);
     border-color: transparent;
@@ -167,15 +182,22 @@
 }
 
 .modal-checkbox-text {
-  @include font(14px, calc(24 / 14), null, 0.03em);
+  @include font(12px, calc(14 / 12), null, 0.03em);
+
   color: var(--maine_color);
   margin-right: 5px;
+  @media screen and (min-width: 1200px) {
+    @include font(14px, calc(24 / 14), null, 0.03em);
+  }
 }
 
 .modal-checkbox-link {
-  @include font(14px, calc(24 / 14), null, 0.03em);
+  @include font(12px, calc(14 / 12), null, 0.03em);
   text-decoration-line: underline;
   color: var(--gray-blue);
+  @media screen and (min-width: 1200px) {
+    @include font(14px, calc(24 / 14), null, 0.03em);
+  }
 }
 
 .modal-btn {
@@ -194,6 +216,7 @@
   margin: 0 auto;
   display: block;
   transition: background-color var(--transition-param);
+
   &:hover,
   &:focus {
     background-color: var(--gray-blue-button);
