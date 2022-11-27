@@ -881,8 +881,8 @@ img {
 }
 
 .team-title {
-  font-size: 36px;
-  line-height: 1.1666666667;
+  font-size: 28px;
+  line-height: 1.1785714286;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
@@ -892,6 +892,10 @@ img {
 @media screen and (min-width: 1200px) {
   .team-title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.1666666667;
+    font-weight: 700;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -966,8 +970,8 @@ img {
 }
 
 .partner-title {
-  font-size: 36px;
-  line-height: 1.1666666667;
+  font-size: 28px;
+  line-height: 1.1785714286;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
@@ -977,6 +981,10 @@ img {
 @media screen and (min-width: 1200px) {
   .partner-title {
     margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.1666666667;
+    font-weight: 700;
+    letter-spacing: 0.03em;
   }
 }
 

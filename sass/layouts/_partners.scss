@@ -1,10 +1,11 @@
 .partner-title {
-  @include font(36px, calc(42 / 36), 700, 0.03em);
+  @include font(28px, calc(33 / 28), 700, 0.03em);
   text-align: center;
   color: var(--gray-black);
   margin-bottom: 30px;
   @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
+    @include font(36px, calc(42 / 36), 700, 0.03em);
   }
 }
 
