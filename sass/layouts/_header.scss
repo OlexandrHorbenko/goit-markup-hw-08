@@ -8,21 +8,17 @@
   justify-content: space-between;
 }
 
-.logo {
+.logo__navigation {
   font-family: "Raleway", sans-serif;
   @include font(24px, calc(28 / 24), 700, 0.03em);
   color: var(--gray-black-logo);
-  @media screen and (min-width: 1200px) {
-    @include font(26px, calc(31 / 26), 700, 0.03em);
-  }
-}
-.logo__navigation {
   padding: 16px 0;
   @media screen and (min-width: 768px) {
     padding: 26px 0;
   }
   @media screen and (min-width: 1200px) {
     padding: 24px 0;
+    @include font(26px, calc(31 / 26), 700, 0.03em);
   }
 }
 
@@ -190,7 +186,7 @@
     color: var(--gray-blue);
   }
   &.current {
-      color: var(--gray-blue);
+    color: var(--gray-blue);
   }
 }
 

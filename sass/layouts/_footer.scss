@@ -44,7 +44,6 @@
 }
 
 .footer-address {
-  font-style: normal;
   @include font(14px, calc(24 / 14), null, 0.03em);
   color: var(--gray-white);
   display: block;
